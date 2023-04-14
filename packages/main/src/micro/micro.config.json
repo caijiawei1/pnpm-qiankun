@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "name": "sub",
+      "type": "react",
+      "devEntry": "https://localhost:8010",
+      "entry": "https://localhost:8010",
+      "container": "#subapp-container",
+      "activeRule": "/sub"
+    }
+  ]
+}

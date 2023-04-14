@@ -1,0 +1,21 @@
+{
+  // add your custom rules here
+  "rules": {
+    "eqeqeq": "off",
+    "no-undef": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [2],
+    "jsx-a11y/anchor-is-valid": "off",
+    "import/no-anonymous-default-export": "off",
+    "exhaustive-deps": "off",
+    "prefer-rest-params": "off",
+    "jsx-no-undef": "off",
+    "ban-ts-comment": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/adjacent-overload-signatures": "off"
+  },
+  "parserOptions": {
+    "warnOnUnsupportedTypeScriptVersion": false
+  }
+}

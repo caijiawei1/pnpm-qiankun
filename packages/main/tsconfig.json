@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "jsxImportSource": "@emotion/react",
+    "paths": {
+      "@": ["src"],
+      "@/*": ["src/*"],
+      "antd": ["antd/es/components/index.tsx"],
+      "antd/es/*": ["antd/es/*"]
+    },
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "types": ["vite/client", "@emotion/react"],
+
+    "sourceMap": true,
+    "alwaysStrict": true,
+    "rootDir": ".",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "customMatcher": "\\.(c|le||lle|sa|sc)ss$"
+        }
+      }
+    ],
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "importHelpers": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": false,
+
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "declaration": true,
+    "skipLibCheck": true
+  },
+  "include": ["src", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "typings.d.ts"],
+  "exclude": ["node_modules", "dist", "**/*.js"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
