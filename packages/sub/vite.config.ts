@@ -41,7 +41,7 @@ export default defineConfig(async () => {
       createHtmlPlugin({
         inject: {
           data: {
-            title: process.env.VITE_APP_TITLE || '变电站在线智能巡视系统',
+            title: process.env.VITE_APP_TITLE || 'qinakun',
           },
         },
         template: './index.html',

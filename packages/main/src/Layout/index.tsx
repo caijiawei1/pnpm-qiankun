@@ -1,6 +1,6 @@
+import React from 'react'
 import { Layout, Menu } from 'antd'
 import { compact, first, head, isEmpty, map } from 'lodash'
-import React from 'react'
 import styles from './index.module.scss'
 import usePaths from '@/hooks/usePaths'
 import { useNavigate } from 'react-router-dom'
@@ -16,9 +16,9 @@ export const getLastChild = (data: any) => {
   return data
 }
 
-const router: any = [
-  { label: 'react', key: 'react', paths: 'react' },
-  { label: 'vue', key: 'vue', paths: 'vue' },
+const menuItems: any = [
+  { title: 'react', key: 'react', paths: 'react' },
+  { title: 'vue', key: 'vue', paths: 'vue' },
 ]
 
 const HeaderMenu = () => {
@@ -31,17 +31,18 @@ const HeaderMenu = () => {
       className={styles.menu}
       selectedKeys={compact([first(paths)])}
       onClick={(menu) => {
+        console.log(menu, 'menu')
         navigate(menu.key)
       }}
     >
-      {map(router, (item: any) => {
+      {map(menuItems, (item: any) => {
         return (
           <Menu.Item
             data-paths={getLastChild(item)?.paths}
             key={item.paths}
             className={styles.menuItem}
           >
-            <span>{item?.label}</span>
+            <span>{item?.title}</span>
           </Menu.Item>
         )
       })}
